@@ -22,7 +22,7 @@ eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourc
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMy5qcyIsInNvdXJjZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///3\n");
+eval("document.querySelector('#load-quote').addEventListener('click', function () {\n  alert('Hi!');\n});\n\n// http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9zcmMvanMvbWFpbi5qcz82OTFmIl0sInNvdXJjZXNDb250ZW50IjpbImRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJyNsb2FkLXF1b3RlJykuYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCAoKSA9PiB7XG4gIGFsZXJ0KCdIaSEnKTtcbn0pO1xuXG4vLyBodHRwOi8vYXBpLmZvcmlzbWF0aWMuY29tL2FwaS8xLjAvP21ldGhvZD1nZXRRdW90ZSZmb3JtYXQ9anNvbiZsYW5nPWVuXG5cblxuXG4vLyBXRUJQQUNLIEZPT1RFUiAvL1xuLy8gc3JjL2pzL21haW4uanMiXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///3\n");
 
 /***/ })
 ],[0]);
