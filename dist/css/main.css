@@ -534,3 +534,7 @@ p:last-child {
   border: 3px solid #BBB;
   padding: 70px;
   margin: 20px; }
+
+.button-row {
+  display: flex;
+  justify-content: space-evenly; }
