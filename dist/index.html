@@ -1,1 +1,23 @@
-<!DOCTYPE html><html lang="en"><head><title>Title</title><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1"><link href="css/main.css" rel="stylesheet"></head><body><div class="page"><header class="header"><div class="container"><div class="header__content"></div></div></header><div class="content"><main class="main-content"><div class="container"><div class="main-content__inner"><section class="display"><div class="movie-screen"><div id="quote-display"></div><span id="author-title"></span></div></section><section class="button-row"><button id="load-quote">New Quote!</button><button id="tweet">Tweet tweet!</button><button id="fakebook">Phasebuuk</button></section></div></div></main></div><footer class="footer"><div class="container"><div class="footer__content"></div></div></footer></div><script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/main.js"></script></body></html>
+<!DOCTYPE html><html lang="en"><head><title>Title</title><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1"><script>window.fbAsyncInit = function() {
+  console.log('FB loaded');
+  FB.init({
+    appId: '205647673334806',
+    autoLogAppEvents: true,
+    xfbml: true,
+    version: 'v2.11'
+  });
+};
+
+(function(d, s, id) {
+  console.log('FB loading...?');
+  var js,
+    fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {
+    return;
+  }
+  js = d.createElement(s);
+  js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js';
+  fjs.parentNode.insertBefore(js, fjs);
+})(document, 'script', 'facebook-jssdk');
+</script><link href="css/main.css" rel="stylesheet"></head><body><div class="page"><header class="header"><div class="container"><div class="header__content"></div></div></header><div class="content"><main class="main-content"><div class="container"><div class="main-content__inner"><section class="display"><div class="movie-screen"><div id="quote-display"></div><span id="author-title"></span></div></section><section class="button-row"><button id="load-quote">New Quote!</button><button id="tweet">Tweet tweet!</button><button id="fakebook">Phasebuuk</button></section></div></div></main></div><footer class="footer"><div class="container"><div class="footer__content"></div></div></footer></div><script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/main.js"></script></body></html>

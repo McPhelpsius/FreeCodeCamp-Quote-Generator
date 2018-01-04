@@ -1,30 +1,41 @@
-document.querySelector('#load-quote').addEventListener('click', () => {
-  const quoteHeader = new Headers({
-    method: 'GET',
-    'Content-Type': 'application/json'
-  });
-  const quote = fetch('http://quotes.rest/qod.json');
-  // ?filter[orderby]=rand&filter[posts_per_page]=1
-  quote
-    .then(response => {
-      var contentType = response.headers.get('content-type');
-      if (contentType && contentType.includes('application/json')) {
-        return response.json();
-      } else {
-        throw new TypeError("That's no JSON!");
-      }
-    })
-    .then(data => {
-      const quoteData = data.contents.quotes[0];
-      document.getElementById('quote-display').innerHTML = `${quoteData.quote}`;
-      document.getElementById('author-title').innerHTML = `- ${
-        quoteData.author
-      },<br> &nbsp; &nbsp;${quoteData.title}`;
-    })
-    .catch(error => {
-      alert(error);
-      console.log(error);
-    });
-});
+document.addEventListener('DOMContentLoaded', () => {
+  let quoteText = new String();
+  let quoteAuthor = new String();
 
-// http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en
+  document.getElementById('load-quote').addEventListener('click', () => {
+    const quoteHeader = new Headers({
+      method: 'GET',
+      'Content-Type': 'application/json'
+    });
+
+    const quote = fetch('https://talaikis.com/api/quotes/random/', quoteHeader);
+
+    quote
+      .then(response => {
+        var contentType = response.headers.get('content-type');
+        if (contentType && contentType.includes('application/json')) {
+          return response.json();
+        } else {
+          throw new TypeError("That's no JSON!");
+        }
+      })
+      .then(quoteData => {
+        quoteText = quoteData.quote;
+        quoteAuthor = quoteData.author;
+        document.getElementById('quote-display').innerHTML = `${quoteText}`;
+        document.getElementById('author-title').innerHTML = `- ${quoteAuthor}`;
+      })
+      .catch(error => {
+        alert(error);
+        console.log(error);
+      });
+  });
+
+  document.getElementById('tweet').addEventListener('click', () => {
+    const tweetIntent = 'https://twitter.com/intent/tweet?text=';
+    let quoteTextQueryString = quoteText.replace(/ /g, '+');
+    window.location = `${tweetIntent}${quoteTextQueryString} - ${quoteAuthor}`;
+  });
+
+  document.getElementById('fakebook').addEventListener('click', () => {});
+});
