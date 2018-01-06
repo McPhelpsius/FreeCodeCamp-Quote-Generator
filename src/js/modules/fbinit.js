@@ -1,11 +1,11 @@
-// window.fbAsyncInit = function() {
-//   FB.init({
-//     appId: '205647673334806',
-//     autoLogAppEvents: true,
-//     xfbml: true,
-//     version: 'v2.11'
-//   });
-// };
+window.fbAsyncInit = function() {
+  FB.init({
+    appId: '205647673334806',
+    autoLogAppEvents: true,
+    xfbml: true,
+    version: 'v2.11'
+  });
+};
 
 (function(d, s, id) {
   var js,
