@@ -38,11 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.getElementById('fakebook').addEventListener('click', () => {
+    let quoteTextQueryString = quoteText.replace(/ /g, '+');
     FB.ui(
       {
         method: 'share',
         mobile_iframe: true,
-        href: 'https://developers.facebook.com/docs/'
+        href: 'https://mcphelpsius.github.io/FreeCodeCamp-Quote-Generator/dist',
+        quote: `${quoteText} - ${quoteAuthor}`
       },
       function(response) {
         console.log(response);
