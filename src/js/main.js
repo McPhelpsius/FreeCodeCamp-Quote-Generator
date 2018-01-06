@@ -37,5 +37,16 @@ document.addEventListener('DOMContentLoaded', () => {
     window.location = `${tweetIntent}${quoteTextQueryString} - ${quoteAuthor}`;
   });
 
-  document.getElementById('fakebook').addEventListener('click', () => {});
+  document.getElementById('fakebook').addEventListener('click', () => {
+    FB.ui(
+      {
+        method: 'share',
+        mobile_iframe: true,
+        href: 'https://developers.facebook.com/docs/'
+      },
+      function(response) {
+        console.log(response);
+      }
+    );
+  });
 });
